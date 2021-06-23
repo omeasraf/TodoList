@@ -14,7 +14,13 @@ struct ListView: View {
     @EnvironmentObject var listViewModel: ListViewModel
     
     var body: some View {
+        
+
         List{
+            if listViewModel.items.isEmpty{
+                Text("Please add an item to your TodoList 😉")
+            }
+            else{
             ForEach(listViewModel.items){item in
                 ListRowView(item: item)
                     .onTapGesture {
@@ -25,7 +31,7 @@ struct ListView: View {
             }
             .onDelete(perform: listViewModel.deleteItem)
             .onMove(perform: listViewModel.moveItem)
-            
+            }
         
         }
 
