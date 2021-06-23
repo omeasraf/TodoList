@@ -3,23 +3,32 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		B4265651268379FB00D79673 /* TodoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4265650268379FB00D79673 /* TodoListApp.swift */; };
-		B4265653268379FB00D79673 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4265652268379FB00D79673 /* ContentView.swift */; };
 		B426565526837A0200D79673 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B426565426837A0200D79673 /* Assets.xcassets */; };
 		B426565826837A0200D79673 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B426565726837A0200D79673 /* Preview Assets.xcassets */; };
+		B426566126837B0700D79673 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B426566026837B0700D79673 /* ListView.swift */; };
+		B426566426837BE400D79673 /* SFIcons in Frameworks */ = {isa = PBXBuildFile; productRef = B426566326837BE400D79673 /* SFIcons */; };
+		B426566726837C7B00D79673 /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B426566626837C7B00D79673 /* ListRowView.swift */; };
+		B426566926837DEA00D79673 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B426566826837DEA00D79673 /* AddView.swift */; };
+		B426566C2683830B00D79673 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B426566B2683830B00D79673 /* ItemModel.swift */; };
+		B426566F2683881C00D79673 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B426566E2683881C00D79673 /* ListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B426564D268379FB00D79673 /* TodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4265650268379FB00D79673 /* TodoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListApp.swift; sourceTree = "<group>"; };
-		B4265652268379FB00D79673 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B426565426837A0200D79673 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B426565726837A0200D79673 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B426565926837A0200D79673 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B426566026837B0700D79673 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		B426566626837C7B00D79673 /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
+		B426566826837DEA00D79673 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		B426566B2683830B00D79673 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		B426566E2683881C00D79673 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B426566426837BE400D79673 /* SFIcons in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,7 +63,10 @@
 			isa = PBXGroup;
 			children = (
 				B4265650268379FB00D79673 /* TodoListApp.swift */,
-				B4265652268379FB00D79673 /* ContentView.swift */,
+				B426566D268387FE00D79673 /* ViewModels */,
+				B426566A268382A700D79673 /* Models */,
+				B426566526837C6E00D79673 /* SubViews */,
+				B426565F26837AE800D79673 /* Views */,
 				B426565426837A0200D79673 /* Assets.xcassets */,
 				B426565926837A0200D79673 /* Info.plist */,
 				B426565626837A0200D79673 /* Preview Content */,
@@ -67,6 +80,39 @@
 				B426565726837A0200D79673 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B426565F26837AE800D79673 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B426566026837B0700D79673 /* ListView.swift */,
+				B426566826837DEA00D79673 /* AddView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B426566526837C6E00D79673 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				B426566626837C7B00D79673 /* ListRowView.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		B426566A268382A700D79673 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B426566B2683830B00D79673 /* ItemModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B426566D268387FE00D79673 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B426566E2683881C00D79673 /* ListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +131,9 @@
 			dependencies = (
 			);
 			name = TodoList;
+			packageProductDependencies = (
+				B426566326837BE400D79673 /* SFIcons */,
+			);
 			productName = TodoList;
 			productReference = B426564D268379FB00D79673 /* TodoList.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +161,9 @@
 				Base,
 			);
 			mainGroup = B4265644268379FB00D79673;
+			packageReferences = (
+				B426566226837BE400D79673 /* XCRemoteSwiftPackageReference "SFIcons" */,
+			);
 			productRefGroup = B426564E268379FB00D79673 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +190,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4265653268379FB00D79673 /* ContentView.swift in Sources */,
+				B426566C2683830B00D79673 /* ItemModel.swift in Sources */,
+				B426566926837DEA00D79673 /* AddView.swift in Sources */,
+				B426566F2683881C00D79673 /* ListViewModel.swift in Sources */,
 				B4265651268379FB00D79673 /* TodoListApp.swift in Sources */,
+				B426566126837B0700D79673 /* ListView.swift in Sources */,
+				B426566726837C7B00D79673 /* ListRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +384,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B426566226837BE400D79673 /* XCRemoteSwiftPackageReference "SFIcons" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/omeasraf/SFIcons";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B426566326837BE400D79673 /* SFIcons */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B426566226837BE400D79673 /* XCRemoteSwiftPackageReference "SFIcons" */;
+			productName = SFIcons;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B4265645268379FB00D79673 /* Project object */;
 }

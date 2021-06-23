@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SFIcons",
+        "repositoryURL": "https://github.com/omeasraf/SFIcons",
+        "state": {
+          "branch": null,
+          "revision": "d89e20ed1f219562ae49d8bef7b224bf3a6c22d2",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
