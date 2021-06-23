@@ -21,7 +21,7 @@ struct AddView: View {
                 .foregroundColor(.white)
                 .padding(.horizontal)
                 .frame(height: 55)
-                .background(Color(#colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)))
+                .background(Color("SecondaryAccentColor"))
                 .cornerRadius(10)
             
             Button(action: saveButtonPressed, label: {

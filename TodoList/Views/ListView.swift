@@ -16,11 +16,15 @@ struct ListView: View {
     var body: some View {
         
 
-        List{
+        ZStack{
             if listViewModel.items.isEmpty{
-                Text("Please add an item to your TodoList 😉")
+                NoItemsView()
+                    .transition(AnyTransition
+                                    .opacity
+                                    .animation(.easeIn))
             }
             else{
+                List{
             ForEach(listViewModel.items){item in
                 ListRowView(item: item)
                     .onTapGesture {
@@ -31,6 +35,7 @@ struct ListView: View {
             }
             .onDelete(perform: listViewModel.deleteItem)
             .onMove(perform: listViewModel.moveItem)
+            }
             }
         
         }
